@@ -1,6 +1,6 @@
 "use strict";
 
-const song = document.getElementById("song");
+const sound = document.getElementById("sound");
 const btnStart = document.querySelector(".btn-start");
 const btnStop = document.querySelector(".btn-stop");
 const btnReset = document.querySelector(".btn-reset");
@@ -19,7 +19,7 @@ btnStop.addEventListener("click", stopTimer);
 btnReset.addEventListener("click", resetTimer);
 
 function startTimer() {
-  song.play();
+  sound.play();
   tens++;
 
   if (tens <= 9) {
@@ -39,12 +39,12 @@ function startTimer() {
 }
 
 function stopTimer() {
-  song.pause();
+  sound.pause();
   clearInterval(interval);
 }
 
 function resetTimer() {
-  song.pause();
+  sound.pause();
   clearInterval(interval);
   tens = 0;
   seconds = 0;
