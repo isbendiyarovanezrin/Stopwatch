@@ -1,5 +1,6 @@
 "use strict";
 
+const song = document.getElementById("song");
 const btnStart = document.querySelector(".btn-start");
 const btnStop = document.querySelector(".btn-stop");
 const btnReset = document.querySelector(".btn-reset");
@@ -18,6 +19,7 @@ btnStop.addEventListener("click", stopTimer);
 btnReset.addEventListener("click", resetTimer);
 
 function startTimer() {
+  song.play();
   tens++;
 
   if (tens <= 9) {
@@ -37,10 +39,12 @@ function startTimer() {
 }
 
 function stopTimer() {
+  song.pause();
   clearInterval(interval);
 }
 
 function resetTimer() {
+  song.pause();
   clearInterval(interval);
   tens = 0;
   seconds = 0;
