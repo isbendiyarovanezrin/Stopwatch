@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(27deg, #151515 0.5rem, transparent 0.5rem) 0
+      0.5rem,
+    linear-gradient(207deg, #151515 0.5rem, transparent 0.5rem) 1rem 0,
+    linear-gradient(27deg, #222 0.5rem, transparent 0.5rem) 0 1rem,
+    linear-gradient(207deg, #222 0.5rem, transparent 0.5rem) 1rem 0.5rem,
+    linear-gradient(90deg, #1b1b1b 1rem, transparent 1rem),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    ),
+    #131313;
+  background-size: 2rem 2rem;
+}
+
+body::before {
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  background-color: #161f9754;
+}
+
+.time {
+  text-align: center;
+  font-size: 20rem;
+  color: #a7aad2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  margin: -3rem 2rem 0;
+  color: red;
+}
+
+.btns {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  width: 17rem;
+  height: 8rem;
+  transition: 0.5 ease;
+  position: relative;
+  border-radius: 0.1rem;
+  margin: 0 2rem;
+  cursor: pointer;
+  color: #191c44;
+  background-color: #a7aad2;
+  box-shadow: inset 0 0 0.09rem #000000;
+  font: 600 3rem "Lato", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-reset,
+.btn-start {
+  transform: rotate(-5deg);
+}
+
+.btn-stop {
+  transform: rotate(5deg);
+}
+
+.btn::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 0.2rem solid red;
+  position: absolute;
+  margin-left: -4rem;
+  margin-top: -1.1rem;
+}
+
+.btn-stop::before {
+  margin-left: -4.3rem;
+}
+
+.btn-reset::before {
+  margin-left: -3.5rem;
+}
+
+.btn:hover {
+  background-color: #6972e6;
+}
+
+.btn:active {
+  background-color: red;
+}
+
+::selection {
+  color: #191c44;
+  background-color: #a7aad2;
+}
+
+.dots::selection {
+  color: red;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 5px;
+  }
+
+  .btn {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 4px;
+  }
+}
