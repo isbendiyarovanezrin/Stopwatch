@@ -51,3 +51,14 @@ function resetTimer() {
   appendTens.innerHTML = "00";
   appendSeconds.innerHTML = "00";
 }
+
+// loader
+$(window).on("load", () => {
+  setTimeout(removeLoader, 1600);
+});
+
+function removeLoader() {
+  $("#loadingDiv").fadeOut(470, () => {
+    $("#loadingDiv").remove();
+  });
+}
