@@ -124,6 +124,23 @@ body::before {
   background-color: red;
 }
 
+#loadingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #191c44;
+}
+
+.loader {
+  width: 8.5rem;
+  height: 8.5rem;
+  background: center / contain no-repeat url(../img/loader.gif);
+}
+
 ::selection {
   color: #191c44;
   background-color: #a7aad2;
