@@ -1,3 +1,7 @@
+:root {
+  --font-family: "Lato", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -20,7 +24,7 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family);
   background: linear-gradient(27deg, #151515 0.5rem, transparent 0.5rem) 0
       0.5rem,
     linear-gradient(207deg, #151515 0.5rem, transparent 0.5rem) 1rem 0,
