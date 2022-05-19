@@ -4,6 +4,8 @@
   --secondary-color: #191c44;
   --tertiary-color: #a7aad2;
   --btn-hover-color: #6972e6;
+  --bg-color1: #131313;
+  --bg-color2: #161f9754;
   --font-family: "Lato", sans-serif;
 }
 
@@ -45,7 +47,7 @@ body {
       #242424 75%,
       #242424
     ),
-    #131313;
+    var(--bg-color1);
   background-size: 2rem 2rem;
 }
 
@@ -57,7 +59,7 @@ body::before {
   min-width: 100vw;
   min-height: 100vh;
   position: absolute;
-  background-color: #161f9754;
+  background-color: var(--bg-color2);
 }
 
 .time {
